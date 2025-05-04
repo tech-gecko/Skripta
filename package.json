@@ -1,0 +1,52 @@
+{
+  "name": "skripta",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsc-watch -p api/tsconfig.json --onSuccess \"node dist/api/app.js\"",
+    "build": "tsc -p api/tsconfig.json",
+    "start": "node dist/api/app.js",
+    "vdev": "tsc-watch -p api/tsconfig.json --onSuccess \"vercel dev\"",
+    "vpreview": "vercel deploy",
+    "vdeploy": "vercel deploy --prod",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tech-gecko/Skripta.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/tech-gecko/Skripta/issues"
+  },
+  "homepage": "https://github.com/tech-gecko/Skripta#readme",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.4",
+    "@types/pdfkit": "^0.13.9",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "express-async-handler": "^1.2.0",
+    "express-validator": "^7.2.1",
+    "firebase-admin": "^13.3.0",
+    "helmet": "^8.1.0",
+    "pdfkit": "^0.17.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/helmet": "^0.0.48",
+    "@types/node": "^22.14.1",
+    "nodemon": "^3.1.9",
+    "prettier": "3.5.3",
+    "ts-node": "^10.9.2",
+    "tsc-watch": "^6.2.1",
+    "typescript": "^5.8.3"
+  },
+  "overrides": {
+    "@types/express": "4.17.21"
+  }
+}

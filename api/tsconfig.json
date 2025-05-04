@@ -1,0 +1,34 @@
+// Rules applied when compiling TypeScript.
+
+{
+  "compilerOptions": {
+    "target": "ES2022",           // Modern but well-supported JavaScript target
+    "module": "NodeNext",         // Modern module system for Node.js
+    "moduleResolution": "NodeNext", // Matching resolution strategy
+    "esModuleInterop": true,      // Enables cleaner imports from CommonJS modules
+    "resolveJsonModule": true,    // Allow importing JSON files
+    "strict": true,               // Enable all strict type checking options
+    "noImplicitAny": true,        // Flag implicit any types
+    "strictNullChecks": true,     // Prevent null/undefined usage without checks
+    "forceConsistentCasingInFileNames": true, // Ensure file references match casing
+    "skipLibCheck": true,         // Skip type checking of declaration files
+    "outDir": "../dist/api",      // Output directory for compiled files
+    "rootDir": "./",              // Specify the root directory of input files
+    "sourceMap": true,            // Generate sourcemaps for debugging
+    "declaration": true,          // Generate .d.ts files
+    "removeComments": false,      // Keep comments in output
+    "allowJs": false,              // Allow only TypeScript files to be compiled
+    "checkJs": false,              // Don't type-check JavaScript files (must be false since "allowJs" is)
+    "allowSyntheticDefaultImports": true, // Allow default imports from modules with no default export
+    "isolatedModules": true,      // Ensure each file can be safely transpiled
+    "noUnusedLocals": true,       // Report errors on unused locals
+    "noUnusedParameters": true,   // Report errors on unused parameters
+    "exactOptionalPropertyTypes": true, // Stricter handling of optional properties
+    "noImplicitReturns": true,    // Report error when not all code paths return
+    "noFallthroughCasesInSwitch": true, // Report errors for fallthrough cases in switch
+    "noUncheckedIndexedAccess": true, // Add undefined to indexed access results
+    "noPropertyAccessFromIndexSignature": true // Requiring dot notation for index access
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules", "../dist", "**/*.test.ts"]
+}
